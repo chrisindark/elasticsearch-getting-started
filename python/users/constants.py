@@ -1,0 +1,1 @@
+USERS_INDEX_NAME = 'users'
