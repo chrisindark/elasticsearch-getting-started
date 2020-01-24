@@ -1,57 +1,55 @@
 {
-    "users": {
-        "aliases": {},
-        "mappings": {
-            "properties": {
-                "email": {
-                    "type": "text",
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        }
-                    }
-                },
-                "id": {
-                    "type": "long"
-                },
-                "password": {
-                    "type": "text",
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        }
-                    }
-                },
-                "status": {
-                    "type": "integer"
-                },
-                "type": {
-                    "type": "integer"
-                },
-                "username": {
-                    "type": "text",
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        }
+    "aliases": {},
+    "mappings": {
+        "properties": {
+            "email": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
                     }
                 }
+            },
+            "id": {
+                "type": "long"
+            },
+            "password": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "status": {
+                "type": "integer"
+            },
+            "type": {
+                "type": "integer"
+            },
+            "username": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "created_at": {
+                "type": "date"
+            },
+            "updated_at": {
+                "type": "date"
             }
-        },
-        "settings": {
-            "index": {
-                "creation_date": "1579772863906",
-                "number_of_shards": "1",
-                "number_of_replicas": "1",
-                "uuid": "4QXqvYdpQAeKuZMKjNQyqQ",
-                "version": {
-                    "created": "7050299"
-                },
-                "provided_name": "users"
-            }
+        }
+    },
+    "settings": {
+        "index": {
+            "number_of_shards": "1",
+            "number_of_replicas": "1"
         }
     }
 }
