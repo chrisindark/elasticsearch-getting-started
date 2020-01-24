@@ -1,0 +1,6 @@
+GET 	/ 				controllers.IndexController.index()
+
+GET		/api			controllers.IndexController.get(input : String)
+POST	/api			controllers.IndexController.post(request : Request)
+PUT		/api			controllers.IndexController.put(request : Request)
+DELETE	/api			controllers.IndexController.delete()
