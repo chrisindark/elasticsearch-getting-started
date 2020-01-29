@@ -7,7 +7,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public enum Status
 {
-    DEFAULT(0),
+    INACTIVE(0),
     ACTIVE(1);
 
     @Getter
