@@ -23,4 +23,9 @@ public class Utils
     {
         return new Date();
     }
+
+    public static String createPassword(String rawPassword)
+    {
+        return rawPassword;
+    }
 }

@@ -6,3 +6,4 @@ PUT		/api			controllers.IndexController.put(request : Request)
 DELETE	/api			controllers.IndexController.delete()
 
 GET     /api/users/:id  controllers.UsersController.get(id: Long)
+POST    /api/users     controllers.UsersController.create(request: Request)
