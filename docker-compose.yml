@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  es01:
+    # image: "docker.elastic.co/elasticsearch/elasticsearch:8.1.0"
+    build: 
+      context: ./
+      dockerfile: elasticsearch-dockerfile
+    container_name: es01
+    network_mode: "elastic"
+    # networks:
+    #   - "elastic"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    environment:
+      - ES_JAVA_OPTS=-Xms750m -Xmx750m
+      - ELASTIC_USERNAME=elastic
+      - ELASTIC_PASSWORD=DkIedPPSCb
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      # elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL2tpYmFuYTpYNkhPTEhLTVQzR2NTaEFEc2R4YXpB"

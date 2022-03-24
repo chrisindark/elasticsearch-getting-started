@@ -1,0 +1,8 @@
+FROM docker.elastic.co/elasticsearch/elasticsearch:8.1.0
+
+USER root
+
+RUN apt update
+RUN apt-get install curl nano -y
+
+USER elasticsearch
