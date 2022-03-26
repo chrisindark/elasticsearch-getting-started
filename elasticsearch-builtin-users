@@ -1,24 +1,20 @@
-# command to run
-bin/elasticsearch-setup-passwords auto
-
-
 Changed password for user apm_system
-PASSWORD apm_system = ao0bQNZyLRCFnE9g1r8g
+PASSWORD apm_system = Fry6STvyY1507kaUieon
 
 Changed password for user kibana_system
-PASSWORD kibana_system = PJOZNDGGs8i4t5msxjvt
+PASSWORD kibana_system = AdKtaoNka6NSD0Q652gI
 
 Changed password for user kibana
-PASSWORD kibana = PJOZNDGGs8i4t5msxjvt
+PASSWORD kibana = AdKtaoNka6NSD0Q652gI
 
 Changed password for user logstash_system
-PASSWORD logstash_system = aPQEulmMLjKZ4eCv3PU8
+PASSWORD logstash_system = 7LxEDuQsdbUgk65uddw0
 
 Changed password for user beats_system
-PASSWORD beats_system = 67JAG1DNeMAfQFTQ2xE1
+PASSWORD beats_system = LIktWI6N5EbngScX5qMu
 
 Changed password for user remote_monitoring_user
-PASSWORD remote_monitoring_user = HsaoyLnesoLXhSCEB1U9
+PASSWORD remote_monitoring_user = hRtyoXYSTAPbiXTY72Bk
 
 Changed password for user elastic
-PASSWORD elastic = g1NiK6WzR85vaWJUV8Gn
+PASSWORD elastic = sXlsg9N0Qw4MCU9HLIQP

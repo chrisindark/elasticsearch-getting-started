@@ -1,4 +1,8 @@
-docker-compose -f docker-compose.yml up --build --force-recreate
+docker-compose -f elasticsearch-docker-compose.yml up --build --force-recreate
+
+docker exec -it es01 bash
+
+bin/elasticsearch-setup-passwords auto
 
 docker-compose -f kibana-docker-compose.yml up --build --force-recreate
 
