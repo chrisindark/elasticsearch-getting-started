@@ -2,7 +2,7 @@ version: "3.9"
 services:
   es01:
     # image: "docker.elastic.co/elasticsearch/elasticsearch:8.1.0"
-    build: 
+    build:
       context: ./
       dockerfile: elasticsearch-dockerfile
     container_name: es01
@@ -10,17 +10,68 @@ services:
     # networks:
     #   - "elastic"
     ports:
-      - "9200:9200"
-      - "9300:9300"
-    # volumes:
-    #   - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - "9201:9201"
+      - "9301:9301"
+    volumes:
+      - ./elasticsearch-1.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./jvm.options:/usr/share/elasticsearch/config/jvm.options
     #   - ./instance.yml:/usr/share/elasticsearch/config/instance.yml
     environment:
-      ES_JAVA_OPTS: '-Xms750m -Xmx750m'
+      # ES_JAVA_OPTS: '-Xms750m -Xmx750m'
       ELASTIC_USERNAME: elastic
       ELASTIC_PASSWORD: elastic
-      discovery.type: 'single-node'
-      xpack.security.enabled: 'true'
+      # discovery.type: 'single-node'
+      # xpack.security.enabled: 'true'
+      http.cors.enabled: 'true'
+      http.cors.allow-origin: '*'
+
+  es02:
+    # image: "docker.elastic.co/elasticsearch/elasticsearch:8.1.0"
+    build:
+      context: ./
+      dockerfile: elasticsearch-dockerfile
+    container_name: es02
+    network_mode: "elastic"
+    # networks:
+    #   - "elastic"
+    ports:
+      - "9202:9202"
+      - "9302:9302"
+    volumes:
+      - ./elasticsearch-2.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./jvm.options:/usr/share/elasticsearch/config/jvm.options
+    #   - ./instance.yml:/usr/share/elasticsearch/config/instance.yml
+    environment:
+      # ES_JAVA_OPTS: '-Xms750m -Xmx750m'
+      ELASTIC_USERNAME: elastic
+      ELASTIC_PASSWORD: elastic
+      # discovery.type: 'single-node'
+      # xpack.security.enabled: 'true'
+      http.cors.enabled: 'true'
+      http.cors.allow-origin: '*'
+
+  es03:
+    # image: "docker.elastic.co/elasticsearch/elasticsearch:8.1.0"
+    build:
+      context: ./
+      dockerfile: elasticsearch-dockerfile
+    container_name: es03
+    network_mode: "elastic"
+    # networks:
+    #   - "elastic"
+    ports:
+      - "9203:9203"
+      - "9303:9303"
+    volumes:
+      - ./elasticsearch-3.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./jvm.options:/usr/share/elasticsearch/config/jvm.options
+    #   - ./instance.yml:/usr/share/elasticsearch/config/instance.yml
+    environment:
+      # ES_JAVA_OPTS: '-Xms750m -Xmx750m'
+      ELASTIC_USERNAME: elastic
+      ELASTIC_PASSWORD: elastic
+      # discovery.type: 'single-node'
+      # xpack.security.enabled: 'true'
       http.cors.enabled: 'true'
       http.cors.allow-origin: '*'
 

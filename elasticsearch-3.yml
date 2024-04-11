@@ -1,5 +1,23 @@
 cluster.name: "docker-cluster"
+node.name: node-3
 network.host: 0.0.0.0
+http.port: 9203
+transport.port: 9303
+
+# Create a new cluster with the current node only
+# Additional nodes can still join the cluster later
+discovery.type: multi-node
+discovery.seed_hosts:
+  - es01:9301
+  - es02:9302
+
+# After the cluster forms successfully for the first time, remove the cluster.initial_master_nodes setting from each node’s configuration.
+# Do not use this setting when restarting a cluster or adding a new node to an existing cluster.
+cluster.initial_master_nodes:
+  - node-1
+  # - node-2
+  # - node-3
+
 #----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
 #
 # The following settings, TLS certificates, and keys have been automatically
@@ -8,7 +26,7 @@ network.host: 0.0.0.0
 # --------------------------------------------------------------------------------
 
 # Enable security features
-# xpack.security.enabled: true
+xpack.security.enabled: false
 # xpack.security.enrollment.enabled: true
 
 # Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
@@ -22,7 +40,4 @@ network.host: 0.0.0.0
 #   verification_mode: certificate
 #   keystore.path: certs/transport.p12
 #   truststore.path: certs/transport.p12
-# Create a new cluster with the current node only
-# Additional nodes can still join the cluster later
-# cluster.initial_master_nodes: ["node1"]
 #----------------------- END SECURITY AUTO CONFIGURATION -------------------------
