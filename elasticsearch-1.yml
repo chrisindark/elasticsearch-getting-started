@@ -15,8 +15,8 @@ discovery.seed_hosts:
 # Do not use this setting when restarting a cluster or adding a new node to an existing cluster.
 cluster.initial_master_nodes:
   - node-1
-#   - node-2
-#   - node-3
+  # - node-2
+  # - node-3
 
 #----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
 #

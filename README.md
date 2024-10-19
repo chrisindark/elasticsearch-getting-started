@@ -65,3 +65,11 @@ nano jvm.options
  -Xmx250m
 
 run other nodes in different ports and specify the seed hosts and master nodes accordingly
+
+###
+create an index and add some data into it
+
+hit:
+http://localhost:9201/_cat/indices
+http://localhost:9201/test
+http://localhost:9201/test/_search
